@@ -1,7 +1,7 @@
 .navbar {
   background-color: aquamarine;
   display: flex;
-  font-size: var(--mid-size);
+  font-size: var(--small-size);
   justify-content: space-between;
   padding: 1rem;
 }
@@ -10,5 +10,6 @@
 .navbar--list,
 .navbar--item {
   display: flex;
-  font-size: var(--mid-size);
+  font-size: var(--extra-small-size);
+  align-items: center;
 }

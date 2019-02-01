@@ -7,7 +7,9 @@ import './Dashboard.css';
 export default () => {
   return (
     <div className="dashboard">
-      <Clients />
+      <div className="dash--clients">
+        <Clients />
+      </div>
       <Sidebar />
     </div>
   )

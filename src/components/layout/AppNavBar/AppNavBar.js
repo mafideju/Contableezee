@@ -12,10 +12,11 @@ class AppNavBar extends Component {
         </Link>
         <div className="navbar--logo">
           <button
+            className="btn"
             type="button"
             data-toggle="collapse"
             data-target="#navbarMain">
-            <span>***</span>
+            <span>|§|</span>
           </button>
           <div className="navbar-list" id="navbarMain">
             <ul className="navbar--item">
