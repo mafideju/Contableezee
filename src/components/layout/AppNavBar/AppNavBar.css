@@ -1,0 +1,14 @@
+.navbar {
+  background-color: aquamarine;
+  display: flex;
+  font-size: var(--mid-size);
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.navbar--logo,
+.navbar--list,
+.navbar--item {
+  display: flex;
+  font-size: var(--mid-size);
+}

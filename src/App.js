@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './firebase/store';
+
+
+import AppNavBar from './components/layout/AppNavBar/AppNavBar';
+import Dashboard from './components/layout/Dashboard/Dashboard';
+// import Clients from './components/clients/Clients';
+
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Provider store={store}>
+        <Router>
+          <main className="App">
+            <AppNavBar />
+            <Switch>
+              <Route exact path="/" component={Dashboard} />
+              {/* <Route exact path="/clientes" component={Clients} /> */}
+            </Switch>
+          </main>
+        </Router>
+      </Provider>
     );
   }
 }
