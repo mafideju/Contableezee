@@ -1,0 +1,15 @@
+.clients--header {
+  display: flex;
+  background-color: brown;
+  color: white;
+  justify-content: space-between;
+}
+
+/* .clients--header__title {
+  display: flex;
+}
+*/
+.clients--header__sum {
+  display: flex;
+  justify-content: space-between;  
+}

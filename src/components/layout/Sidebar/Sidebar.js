@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default () => {
   return (
     <div>
-      <Link to="/client/adicionar">Novo Cliente</Link>
+      <Link to="/client/add">Novo Cliente</Link>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Clients from '../../clients/Clients';
+import Clients from '../../clients/Clients/Clients';
 import Sidebar from '../Sidebar/Sidebar';
 
 import './Dashboard.css';
@@ -10,7 +10,9 @@ export default () => {
       <div className="dash--clients">
         <Clients />
       </div>
-      <Sidebar />
+      <div>
+        <Sidebar />
+      </div>
     </div>
   )
 }

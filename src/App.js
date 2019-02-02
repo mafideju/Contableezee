@@ -6,7 +6,8 @@ import store from './firebase/store';
 
 import AppNavBar from './components/layout/AppNavBar/AppNavBar';
 import Dashboard from './components/layout/Dashboard/Dashboard';
-// import Clients from './components/clients/Clients';
+import AddClient from './components/clients/AddClient/AddClient';
+import ClientDetails from './components/clients/ClientDetails/ClientDetails';
 
 import './App.css';
 
@@ -19,7 +20,8 @@ class App extends Component {
             <AppNavBar />
             <Switch>
               <Route exact path="/" component={Dashboard} />
-              {/* <Route exact path="/clientes" component={Clients} /> */}
+              <Route exact path="/client/add" component={AddClient} />
+              <Route exact path="/client/:id" component={ClientDetails} />
             </Switch>
           </main>
         </Router>
