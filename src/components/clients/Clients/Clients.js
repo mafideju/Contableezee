@@ -15,9 +15,9 @@ class Clients extends Component {
   static getDerivedStateFromProps = (props, state) => {
     const { clients } = props;
     if (clients) {
-      console.log('SALDO =>', clients)
+      // console.log('SALDO =>', clients)
       const total = clients.reduce((total, client) => {
-        return total + parseFloat(client.saldo.toString());
+        return parseFloat(total) + parseFloat(client.saldo.toString());
       }, 0);
       return { totalOwed: total }
     } else {
@@ -29,7 +29,6 @@ class Clients extends Component {
     const { clients } = this.props;
     const { totalOwed } = this.state;
 
-    console.log('PROPS =>', this.props.clients)
     return (
       <div>
         {clients ?
@@ -63,9 +62,6 @@ class Clients extends Component {
                     <td>R${parseFloat(client.saldo).toFixed(2)}</td>
                     <td>
                       <Link to={`/client/${client.id}`}>Mais</Link>
-                    </td>
-                    <td>
-                      <Link to={`/client/${client.id}`}>X</Link>
                     </td>
                   </tr>
                 ))}
